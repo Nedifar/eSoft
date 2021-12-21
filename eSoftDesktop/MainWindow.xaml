@@ -10,6 +10,7 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Content="Rieltor" Click="clRieltor" />
             <Button Content="Client" Click="clClient"/>
+            <Button Content="Estate" Click="clEstate"/>
         </StackPanel>
     </Grid>
 </Window>

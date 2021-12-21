@@ -20,5 +20,8 @@ namespace eSoftDesktop.Models
         public DbSet<Realtor> Realtors { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<District> Districts { get; set; }
+        public DbSet<House> Houses { get; set; }
+        public DbSet<Apartament> Apartaments { get; set; }
+        public DbSet<Land> Lands { get; set; }
     }
 }

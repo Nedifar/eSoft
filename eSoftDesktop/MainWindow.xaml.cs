@@ -41,18 +41,29 @@ namespace eSoftDesktop
 
         private void gg()
         {
-            var stream = File.ReadAllLines(@"C:\Users\gazimov.ii0794\Downloads\agents.txt");
+            var stream = File.ReadAllLines(@"C:\Users\gazimov.ii0794\Desktop\agents.txt");
 
             foreach (var line in stream)
             {
-                var kk = new Models.District();
-                kk.Name = line.Split('\t')[0];
-                kk.area = line.Split('\t')[1];
-                Models.contetx.aGetContext().Districts.Add(kk);
+                var kk = new Models.Land();
+                string[] massiv = line.Split('\t');
+                kk.Id = int.Parse(massiv[0]);
+                kk.adressCity = massiv[1];
+                kk.adressStreet = massiv[2];
+                kk.addressHouse = massiv[3];
+                kk.addressNumber = massiv[4];
+                kk.coordinateLatitude = massiv[5];
+                kk.coordinateLongitude = massiv[6];
+                kk.totalArea = double.Parse(massiv[7]);
+                Models.contetx.aGetContext().Lands.Add(kk);
                 Models.contetx.aGetContext().SaveChanges();
             }
-
         }
 
+        private void clEstate(object sender, RoutedEventArgs e)
+        {
+            Forms.EstateForm estate = new Forms.EstateForm();
+            estate.Show();
+        }
     }
 }

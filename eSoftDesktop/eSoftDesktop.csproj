@@ -69,11 +69,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\AddEditEstateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\AddEditRealtorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\ClientForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\EstateForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,11 +100,17 @@
     <Compile Include="Forms\AddEditClientWindow.xaml.cs">
       <DependentUpon>AddEditClientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddEditEstateWindow.xaml.cs">
+      <DependentUpon>AddEditEstateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddEditRealtorWindow.xaml.cs">
       <DependentUpon>AddEditRealtorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\ClientForm.xaml.cs">
       <DependentUpon>ClientForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EstateForm.xaml.cs">
+      <DependentUpon>EstateForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\RealtorForm.xaml.cs">
       <DependentUpon>RealtorForm.xaml</DependentUpon>
@@ -119,10 +133,27 @@
     <Compile Include="Migrations\202112200937133_Distinct.designer.cs">
       <DependentUpon>202112200937133_Distinct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112210603512_Home.cs" />
+    <Compile Include="Migrations\202112210603512_Home.designer.cs">
+      <DependentUpon>202112210603512_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112210616287_Home1.cs" />
+    <Compile Include="Migrations\202112210616287_Home1.designer.cs">
+      <DependentUpon>202112210616287_Home1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112210627015_Home2.cs" />
+    <Compile Include="Migrations\202112210627015_Home2.designer.cs">
+      <DependentUpon>202112210627015_Home2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Apartament.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\contetx.cs" />
     <Compile Include="Models\District.cs" />
+    <Compile Include="Models\House.cs" />
+    <Compile Include="Models\Land.cs" />
+    <Compile Include="Models\MainHome.cs" />
+    <Compile Include="Models\OutputHouse.cs" />
     <Compile Include="Models\Realtor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -145,6 +176,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112200937133_Distinct.resx">
       <DependentUpon>202112200937133_Distinct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112210603512_Home.resx">
+      <DependentUpon>202112210603512_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112210616287_Home1.resx">
+      <DependentUpon>202112210616287_Home1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112210627015_Home2.resx">
+      <DependentUpon>202112210627015_Home2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
