@@ -70,7 +70,7 @@ namespace eSoftDesktop.Forms
                         Models.contetx.aGetContext().Apartaments.Remove(apa);
                         break;
                     case "Земля":
-                        var la = Models.contetx.aGetContext().Lands.Where(p=>p.Id==i).FirstOrDefault();
+                        var la = Models.contetx.aGetContext().Lands.Where(p=>p.Id == i).FirstOrDefault();
                         Models.contetx.aGetContext().Lands.Remove(la);
                         break;
                 }
@@ -100,14 +100,12 @@ namespace eSoftDesktop.Forms
         {
             if (search.Text != "")
             {
-                var list = new List<Models.Client>();
-                foreach (var p in Models.contetx.aGetContext().Clients)
+                var list = new List<Models.OutputHouse>();
+                foreach (var p in outputs)
                 {
-                    if (LevenshteinDistance(p.lastName, search.Text) <= 3)
+                    if (LevenshteinDistance(p.adressCity, search.Text) <= 3)
                         list.Add(p);
-                    else if (LevenshteinDistance(p.Name, search.Text) <= 3)
-                        list.Add(p);
-                    else if (LevenshteinDistance(p.middleName, search.Text) <= 3)
+                    else if (LevenshteinDistance(p.adressStreet, search.Text) <= 3)
                         list.Add(p);
                 }
                 dgEstates.ItemsSource = list;

@@ -145,16 +145,25 @@
     <Compile Include="Migrations\202112210627015_Home2.designer.cs">
       <DependentUpon>202112210627015_Home2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112220656279_new.cs" />
+    <Compile Include="Migrations\202112220656279_new.designer.cs">
+      <DependentUpon>202112220656279_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Apartament.cs" />
+    <Compile Include="Models\ApartamentDemand.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\contetx.cs" />
+    <Compile Include="Models\Demand.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\House.cs" />
+    <Compile Include="Models\HouseDemand.cs" />
     <Compile Include="Models\Land.cs" />
+    <Compile Include="Models\LandDemand.cs" />
     <Compile Include="Models\MainHome.cs" />
     <Compile Include="Models\OutputHouse.cs" />
     <Compile Include="Models\Realtor.cs" />
+    <Compile Include="Models\Supply.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -185,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112210627015_Home2.resx">
       <DependentUpon>202112210627015_Home2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112220656279_new.resx">
+      <DependentUpon>202112220656279_new.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

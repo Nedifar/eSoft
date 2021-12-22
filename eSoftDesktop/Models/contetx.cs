@@ -23,5 +23,9 @@ namespace eSoftDesktop.Models
         public DbSet<House> Houses { get; set; }
         public DbSet<Apartament> Apartaments { get; set; }
         public DbSet<Land> Lands { get; set; }
+        public DbSet<ApartamentDemand> ApartamentDemands { get; set; }
+        public DbSet<LandDemand> LandDemands { get; set; }
+        public DbSet<HouseDemand> HouseDemands { get; set; }
+        public DbSet<Supply> Supplies { get; set; }
     }
 }

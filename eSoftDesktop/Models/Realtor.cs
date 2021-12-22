@@ -16,6 +16,7 @@ namespace eSoftDesktop.Models
         public string middleName { get; set; }
         [Range(0, 100)]
         public int comissionPart { get; set; }
-
+        public List<Demand> Demands { get; set; } = new List<Demand>();
+        public List<Supply> Supplies { get; set; } = new List<Supply>();
     }
 }

@@ -18,5 +18,6 @@ namespace eSoftDesktop.Models
         public string coordinateLatitude { get; set; }
         public string coordinateLongitude { get; set; }
         public double totalArea { get; set; }
+        public List<Supply> Supplies { get; set; } = new List<Supply>();
     }
 }

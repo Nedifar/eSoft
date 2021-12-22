@@ -33,22 +33,17 @@ namespace eSoftDesktop.Forms
                 switch (output.Type)
                 {
                     case "Дом":
-                        house = new Models.House { addressHouse = output.addressHouse, addressNumber = output.addressNumber, adressCity = output.adressCity, adressStreet = output.adressStreet, coordinateLatitude = output.coordinateLatitude, coordinateLongitude = output.coordinateLongitude, Floor = output.Floor, Id = output.Id, totalArea = output.totalArea };
-                        DataContext = house;
                         cb.SelectedIndex = 0;
                         break;
                     case "Апарматенты":
-                        apartament  = new Models.Apartament { addressHouse = output.addressHouse, addressNumber = output.addressNumber, adressCity = output.adressCity, adressStreet = output.adressStreet, coordinateLatitude = output.coordinateLatitude, coordinateLongitude = output.coordinateLongitude, Floor = output.Floor, Id = output.Id, Rooms = output.Rooms, totalArea = output.totalArea };
-                        DataContext = apartament;
                         cb.SelectedIndex = 1;
                         break;
                     case "Земля":
-                        land = new Models.Land { addressHouse = output.addressHouse, addressNumber = output.addressNumber, adressCity = output.adressCity, adressStreet = output.adressStreet, coordinateLatitude = output.coordinateLatitude, coordinateLongitude = output.coordinateLongitude, Id = output.Id, totalArea = output.totalArea };
-                        DataContext = land;
                         cb.SelectedIndex = 2;
                         break;
                 }
             }
+            DataContext = ou;
         }
 
         private void clSAve(object sender, RoutedEventArgs e)
@@ -58,21 +53,67 @@ namespace eSoftDesktop.Forms
                 switch (cb.SelectedIndex)
                 {
                     case 0:
-                        Models.contetx.aGetContext().Houses.Add(house);
+                        Models.contetx.aGetContext().Houses.Add(new Models.House { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, Floor = ou.Floor, Id = ou.Id, totalArea = ou.totalArea });
                         Models.contetx.aGetContext().SaveChanges();
                         break;
                     case 1:
-                        Models.contetx.aGetContext().Apartaments.Add(apartament);
+                        Models.contetx.aGetContext().Apartaments.Add(new Models.Apartament { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, Floor = ou.Floor, Id = ou.Id, Rooms = ou.Rooms, totalArea = ou.totalArea });
                         Models.contetx.aGetContext().SaveChanges();
                         break;
                     case 2:
-                        Models.contetx.aGetContext().Lands.Add(land);
+                        Models.contetx.aGetContext().Lands.Add(new Models.Land { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, Id = ou.Id, totalArea = ou.totalArea });
                         Models.contetx.aGetContext().SaveChanges();
                         break;
                 }
             }
             else
-                Models.contetx.aGetContext().SaveChanges();
+            {
+                switch (cb.SelectedIndex)
+                {
+                    case 0:
+                        var a = Models.contetx.aGetContext().Houses.Where(p => p.Id == ou.Id).FirstOrDefault();
+                        if (a == null)
+                            a = new Models.House();
+                        a.addressHouse = ou.addressHouse;
+                        a.addressNumber = ou.addressNumber;
+                        a.adressCity = ou.adressCity;
+                        a.adressStreet = ou.adressStreet;
+                        a.coordinateLatitude = ou.coordinateLatitude;
+                        a.coordinateLongitude = ou.coordinateLongitude;
+                        a.Floor = ou.Floor;
+                        a.totalArea = ou.totalArea;
+                        Models.contetx.aGetContext().SaveChanges();
+                        break;
+                    case 1:
+                        var b = Models.contetx.aGetContext().Apartaments.Where(p => p.Id == ou.Id).FirstOrDefault();
+                        if (b == null)
+                            b = new Models.Apartament();
+                        b.addressHouse = ou.addressHouse;
+                        b.addressNumber = ou.addressNumber;
+                        b.adressCity = ou.adressCity;
+                        b.adressStreet = ou.adressStreet;
+                        b.coordinateLatitude = ou.coordinateLatitude;
+                        b.coordinateLongitude = ou.coordinateLongitude;
+                        b.Floor = ou.Floor;
+                        b.totalArea = ou.totalArea;
+                        b.Rooms = ou.Rooms;
+                        Models.contetx.aGetContext().SaveChanges();
+                        break;
+                    case 2:
+                        var c = Models.contetx.aGetContext().Lands.Where(p => p.Id == ou.Id).FirstOrDefault();
+                        if (c == null)
+                            c = new Models.Land();
+                        c.addressHouse = ou.addressHouse;
+                        c.addressNumber = ou.addressNumber;
+                        c.adressCity = ou.adressCity;
+                        c.adressStreet = ou.adressStreet;
+                        c.coordinateLatitude = ou.coordinateLatitude;
+                        c.coordinateLongitude = ou.coordinateLongitude;
+                        c.totalArea = ou.totalArea;
+                        Models.contetx.aGetContext().SaveChanges();
+                        break;
+                }
+            }
         }
 
         private void cb_SelectionChanged(object sender, SelectionChangedEventArgs e)

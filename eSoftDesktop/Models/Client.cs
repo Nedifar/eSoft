@@ -16,5 +16,7 @@ namespace eSoftDesktop.Models
         public string middleName { get; set; }
         public string Telephone { get; set; }
         public string eMail { get; set; }
+        public List<Demand> Demands { get; set; }
+        public List<Supply> Supplies { get; set; }  =new List<Supply>();
     }
 }
