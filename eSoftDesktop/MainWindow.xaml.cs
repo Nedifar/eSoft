@@ -24,7 +24,7 @@ namespace eSoftDesktop
         public MainWindow()
         {
             InitializeComponent();
-            //gg();
+            gg();
         }
 
         private void clRieltor(object sender, RoutedEventArgs e)
@@ -41,21 +41,17 @@ namespace eSoftDesktop
 
         private void gg()
         {
-            var stream = File.ReadAllLines(@"C:\Users\gazimov.ii0794\Desktop\agents.txt");
+            var stream = File.ReadAllLines(@"C:\Users\gazimov.ii0794\Desktop\supplies.txt");
 
             foreach (var line in stream)
             {
-                var kk = new Models.Land();
+                var kk = new Models.Supply();
                 string[] massiv = line.Split('\t');
-                kk.Id = int.Parse(massiv[0]);
-                kk.adressCity = massiv[1];
-                kk.adressStreet = massiv[2];
-                kk.addressHouse = massiv[3];
-                kk.addressNumber = massiv[4];
-                kk.coordinateLatitude = massiv[5];
-                kk.coordinateLongitude = massiv[6];
-                kk.totalArea = double.Parse(massiv[7]);
-                Models.contetx.aGetContext().Lands.Add(kk);
+                kk.clientId = int.Parse(massiv[0]);
+                kk.realtorId = int.Parse(massiv[1]);
+                kk.homeId = int.Parse(massiv[2]);
+                kk.Price = int.Parse(massiv[3]);
+                Models.contetx.aGetContext().Supplies.Add(kk);
                 Models.contetx.aGetContext().SaveChanges();
             }
         }
@@ -64,6 +60,12 @@ namespace eSoftDesktop
         {
             Forms.EstateForm estate = new Forms.EstateForm();
             estate.Show();
+        }
+
+        private void clSupply(object sender, RoutedEventArgs e)
+        {
+            Forms.SupplyForm supply = new Forms.SupplyForm();
+            supply.Show();
         }
     }
 }

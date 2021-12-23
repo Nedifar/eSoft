@@ -10,7 +10,7 @@ namespace eSoftDesktop.Models
     public class MainHome
     {
         [Key]
-        public int Id { get; set; }
+        public int homeId { get; set; }
         public string adressCity { get; set; }
         public string adressStreet { get; set; }
         public string addressHouse { get; set; }

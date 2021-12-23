@@ -77,6 +77,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\AddEditSupplyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\ClientForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\RealtorForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\SupplyForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,6 +114,9 @@
     <Compile Include="Forms\AddEditRealtorWindow.xaml.cs">
       <DependentUpon>AddEditRealtorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddEditSupplyWindow.xaml.cs">
+      <DependentUpon>AddEditSupplyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ClientForm.xaml.cs">
       <DependentUpon>ClientForm.xaml</DependentUpon>
     </Compile>
@@ -114,6 +125,9 @@
     </Compile>
     <Compile Include="Forms\RealtorForm.xaml.cs">
       <DependentUpon>RealtorForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplyForm.xaml.cs">
+      <DependentUpon>SupplyForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

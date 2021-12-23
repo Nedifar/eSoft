@@ -15,7 +15,7 @@ namespace eSoftDesktop.Models
         public Client Client { get; set; }
         public int realtorId { get; set; }
         public Realtor Realtor { get; set; }
-        public int Id { get; set; }
+        public int homeId { get; set; }
         public MainHome MainHome { get; set; }
         public int Price { get; set; }
     }

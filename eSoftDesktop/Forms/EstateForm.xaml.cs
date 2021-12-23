@@ -62,15 +62,15 @@ namespace eSoftDesktop.Forms
                 switch ((dgEstates.SelectedItem as Models.OutputHouse).Type)
                 {
                     case "Дом":
-                        var ho = Models.contetx.aGetContext().Houses.Where(p => p.Id == i).FirstOrDefault();
+                        var ho = Models.contetx.aGetContext().Houses.Where(p => p.homeId == i).FirstOrDefault();
                         Models.contetx.aGetContext().Houses.Remove(ho);
                         break;
                     case "Апарматенты":
-                        var apa = Models.contetx.aGetContext().Apartaments.Where(p => p.Id == i).FirstOrDefault();
+                        var apa = Models.contetx.aGetContext().Apartaments.Where(p => p.homeId == i).FirstOrDefault();
                         Models.contetx.aGetContext().Apartaments.Remove(apa);
                         break;
                     case "Земля":
-                        var la = Models.contetx.aGetContext().Lands.Where(p=>p.Id == i).FirstOrDefault();
+                        var la = Models.contetx.aGetContext().Lands.Where(p=>p.homeId == i).FirstOrDefault();
                         Models.contetx.aGetContext().Lands.Remove(la);
                         break;
                 }
@@ -146,17 +146,17 @@ namespace eSoftDesktop.Forms
             List<Models.OutputHouse> output = new List<Models.OutputHouse>();
             foreach (var line in Models.contetx.aGetContext().Apartaments)
             {
-                var res = new Models.OutputHouse { addressHouse = line.addressHouse, addressNumber = line.addressNumber, adressCity = line.adressCity, adressStreet = line.adressStreet, coordinateLatitude = line.coordinateLatitude, coordinateLongitude = line.coordinateLongitude, Floor = line.Floor, Id = line.Id, Rooms = line.Rooms, totalArea = line.totalArea, Type = "Апарматенты" };
+                var res = new Models.OutputHouse { addressHouse = line.addressHouse, addressNumber = line.addressNumber, adressCity = line.adressCity, adressStreet = line.adressStreet, coordinateLatitude = line.coordinateLatitude, coordinateLongitude = line.coordinateLongitude, Floor = line.Floor, Id = line.homeId, Rooms = line.Rooms, totalArea = line.totalArea, Type = "Апарматенты" };
                 output.Add(res);
             }
             foreach (var line in Models.contetx.aGetContext().Houses)
             {
-                var res = new Models.OutputHouse { addressHouse = line.addressHouse, addressNumber = line.addressNumber, adressCity = line.adressCity, adressStreet = line.adressStreet, coordinateLatitude = line.coordinateLatitude, coordinateLongitude = line.coordinateLongitude, Floor = line.Floor, Id = line.Id, totalArea = line.totalArea, Type = "Дом" };
+                var res = new Models.OutputHouse { addressHouse = line.addressHouse, addressNumber = line.addressNumber, adressCity = line.adressCity, adressStreet = line.adressStreet, coordinateLatitude = line.coordinateLatitude, coordinateLongitude = line.coordinateLongitude, Floor = line.Floor, Id = line.homeId, totalArea = line.totalArea, Type = "Дом" };
                 output.Add(res);
             }
             foreach (var line in Models.contetx.aGetContext().Lands)
             {
-                var res = new Models.OutputHouse { addressHouse = line.addressHouse, addressNumber = line.addressNumber, adressCity = line.adressCity, adressStreet = line.adressStreet, coordinateLatitude = line.coordinateLatitude, coordinateLongitude = line.coordinateLongitude, Id = line.Id, totalArea = line.totalArea, Type = "Земля" };
+                var res = new Models.OutputHouse { addressHouse = line.addressHouse, addressNumber = line.addressNumber, adressCity = line.adressCity, adressStreet = line.adressStreet, coordinateLatitude = line.coordinateLatitude, coordinateLongitude = line.coordinateLongitude, Id = line.homeId, totalArea = line.totalArea, Type = "Земля" };
                 output.Add(res);
             }
             return output;
