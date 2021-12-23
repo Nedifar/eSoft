@@ -50,67 +50,72 @@ namespace eSoftDesktop.Forms
         {
             if (ou.Id == 0)
             {
+                var main = new Models.MainAHL { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, totalArea = ou.totalArea };
                 switch (cb.SelectedIndex)
                 {
                     case 0:
-                        Models.contetx.aGetContext().Houses.Add(new Models.House { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, Floor = ou.Floor, homeId = ou.Id, totalArea = ou.totalArea });
-                        Models.contetx.aGetContext().SaveChanges();
+                        Models.context.aGetContext().MainAHLs.Add(main);
+                        Models.context.aGetContext().Houses.Add(new Models.House { Floor = ou.Floor, MainAHL = main });
+                        Models.context.aGetContext().SaveChanges();
                         break;
                     case 1:
-                        Models.contetx.aGetContext().Apartaments.Add(new Models.Apartament { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, Floor = ou.Floor, homeId = ou.Id, Rooms = ou.Rooms, totalArea = ou.totalArea });
-                        Models.contetx.aGetContext().SaveChanges();
+                        Models.context.aGetContext().MainAHLs.Add(main);
+                        Models.context.aGetContext().Apartaments.Add(new Models.Apartament { Floor = ou.Floor, Rooms = ou.Rooms, MainAHL = main });
+                        Models.context.aGetContext().SaveChanges();
                         break;
                     case 2:
-                        Models.contetx.aGetContext().Lands.Add(new Models.Land { addressHouse = ou.addressHouse, addressNumber = ou.addressNumber, adressCity = ou.adressCity, adressStreet = ou.adressStreet, coordinateLatitude = ou.coordinateLatitude, coordinateLongitude = ou.coordinateLongitude, homeId = ou.Id, totalArea = ou.totalArea });
-                        Models.contetx.aGetContext().SaveChanges();
+                        Models.context.aGetContext().MainAHLs.Add(main);
+                        Models.context.aGetContext().Lands.Add(new Models.Land { MainAHL = main });
+                        Models.context.aGetContext().SaveChanges();
                         break;
                 }
             }
             else
             {
+                var main = Models.context.aGetContext().MainAHLs.Where(p => p.idAHL == ou.Id).FirstOrDefault();
                 switch (cb.SelectedIndex)
                 {
                     case 0:
-                        var a = Models.contetx.aGetContext().Houses.Where(p => p.homeId == ou.Id).FirstOrDefault();
+                        var a = Models.context.aGetContext().Houses.Where(p => p.idAHL == ou.Id).FirstOrDefault();
                         if (a == null)
                             a = new Models.House();
-                        a.addressHouse = ou.addressHouse;
-                        a.addressNumber = ou.addressNumber;
-                        a.adressCity = ou.adressCity;
-                        a.adressStreet = ou.adressStreet;
-                        a.coordinateLatitude = ou.coordinateLatitude;
-                        a.coordinateLongitude = ou.coordinateLongitude;
+                        main.addressHouse = ou.addressHouse;
+                        main.addressNumber = ou.addressNumber;
+                        main.adressCity = ou.adressCity;
+                        main.adressStreet = ou.adressStreet;
+                        main.coordinateLatitude = ou.coordinateLatitude;
+                        main.coordinateLongitude = ou.coordinateLongitude;
                         a.Floor = ou.Floor;
-                        a.totalArea = ou.totalArea;
-                        Models.contetx.aGetContext().SaveChanges();
+                        main.totalArea = ou.totalArea;
+                        Models.context.aGetContext().SaveChanges();
                         break;
                     case 1:
-                        var b = Models.contetx.aGetContext().Apartaments.Where(p => p.homeId == ou.Id).FirstOrDefault();
+                        var b = Models.context.aGetContext().Apartaments.Where(p => p.idAHL == ou.Id).FirstOrDefault();
                         if (b == null)
                             b = new Models.Apartament();
-                        b.addressHouse = ou.addressHouse;
-                        b.addressNumber = ou.addressNumber;
-                        b.adressCity = ou.adressCity;
-                        b.adressStreet = ou.adressStreet;
-                        b.coordinateLatitude = ou.coordinateLatitude;
-                        b.coordinateLongitude = ou.coordinateLongitude;
+                        main.addressHouse = ou.addressHouse;
+                        main.addressNumber = ou.addressNumber;
+                        main.adressCity = ou.adressCity;
+                        main.adressStreet = ou.adressStreet;
+                        main.coordinateLatitude = ou.coordinateLatitude;
+                        main.coordinateLongitude = ou.coordinateLongitude;
                         b.Floor = ou.Floor;
-                        b.totalArea = ou.totalArea;
+                        main.totalArea = ou.totalArea;
                         b.Rooms = ou.Rooms;
-                        Models.contetx.aGetContext().SaveChanges();
+                        Models.context.aGetContext().SaveChanges();
                         break;
                     case 2:
-                        var c = Models.contetx.aGetContext().Lands.Where(p => p.homeId == ou.Id).FirstOrDefault();
+                        var c = Models.context.aGetContext().Lands.Where(p => p.idAHL == ou.Id).FirstOrDefault();
                         if (c == null)
                             c = new Models.Land();
-                        c.addressHouse = ou.addressHouse;
-                        c.addressNumber = ou.addressNumber;
-                        c.adressCity = ou.adressCity;
-                        c.adressStreet = ou.adressStreet;
-                        c.coordinateLatitude = ou.coordinateLatitude;
-                        c.coordinateLongitude = ou.coordinateLongitude;
-                        c.totalArea = ou.totalArea;
-                        Models.contetx.aGetContext().SaveChanges();
+                        main.addressHouse = ou.addressHouse;
+                        main.addressNumber = ou.addressNumber;
+                        main.adressCity = ou.adressCity;
+                        main.adressStreet = ou.adressStreet;
+                        main.coordinateLatitude = ou.coordinateLatitude;
+                        main.coordinateLongitude = ou.coordinateLongitude;
+                        main.totalArea = ou.totalArea;
+                        Models.context.aGetContext().SaveChanges();
                         break;
                 }
             }

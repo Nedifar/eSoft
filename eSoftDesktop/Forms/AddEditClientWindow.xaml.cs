@@ -36,11 +36,11 @@ namespace eSoftDesktop.Forms
             }
             else
             {
-                if (client.clientId== 0)
+                if (client.idClient== 0)
                 {
-                    Models.contetx.aGetContext().Clients.Add(client);
+                    Models.context.aGetContext().Clients.Add(client);
                 }
-                Models.contetx.aGetContext().SaveChanges();
+                Models.context.aGetContext().SaveChanges();
                 MessageBox.Show("Saved");
                 Close();
             }

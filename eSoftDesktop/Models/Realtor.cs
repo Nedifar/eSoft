@@ -10,7 +10,7 @@ namespace eSoftDesktop.Models
     public class Realtor
     {
         [Key]
-        public int realtorId { get; set; }
+        public int idRealtor { get; set; }
         public string lastName { get; set; }
         public string Name { get; set; }
         public string middleName { get; set; }

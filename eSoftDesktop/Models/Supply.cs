@@ -10,13 +10,13 @@ namespace eSoftDesktop.Models
     public class Supply
     {
         [Key]
-        public int supplyId { get; set; }
-        public int clientId { get; set; }
+        public int idSupply { get; set; }
+        public int idClient { get; set; }
         public Client Client { get; set; }
-        public int realtorId { get; set; }
+        public int idRealtor { get; set; }
         public Realtor Realtor { get; set; }
-        public int homeId { get; set; }
-        public MainHome MainHome { get; set; }
+        public int idAHL { get; set; }
+        public MainAHL MainAHL { get; set; }
         public int Price { get; set; }
     }
 }

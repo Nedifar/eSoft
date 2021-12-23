@@ -7,13 +7,13 @@ namespace eSoftDesktop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Distinct : IMigrationMetadata
+    public sealed partial class _new : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Distinct));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_new));
         
         string IMigrationMetadata.Id
         {
-            get { return "202112200937133_Distinct"; }
+            get { return "202112230736562_new"; }
         }
         
         string IMigrationMetadata.Source

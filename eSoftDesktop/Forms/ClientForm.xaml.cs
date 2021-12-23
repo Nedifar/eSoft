@@ -22,7 +22,7 @@ namespace eSoftDesktop.Forms
         public ClientForm()
         {
             InitializeComponent();
-            dgClients.ItemsSource = Models.contetx.aGetContext().Clients.ToList();
+            dgClients.ItemsSource = Models.context.aGetContext().Clients.ToList();
         }
 
         private void clAdd(object sender, RoutedEventArgs e)
@@ -36,7 +36,7 @@ namespace eSoftDesktop.Forms
         {
             if((sender as Window).Visibility == Visibility.Visible)
             {
-                dgClients.ItemsSource = Models.contetx.aGetContext().Clients.ToList();
+                dgClients.ItemsSource = Models.context.aGetContext().Clients.ToList();
             }
             else
             { }
@@ -47,9 +47,9 @@ namespace eSoftDesktop.Forms
         {
             if (dgClients.SelectedItem != null)
             {
-                Models.contetx.aGetContext().Clients.Remove(dgClients.SelectedItem as Models.Client);
-                Models.contetx.aGetContext().SaveChanges();
-                dgClients.ItemsSource = Models.contetx.aGetContext().Clients.ToList();
+                Models.context.aGetContext().Clients.Remove(dgClients.SelectedItem as Models.Client);
+                Models.context.aGetContext().SaveChanges();
+                dgClients.ItemsSource = Models.context.aGetContext().Clients.ToList();
 
             }
             else
@@ -73,7 +73,7 @@ namespace eSoftDesktop.Forms
             if (search.Text != "")
             {
                 var list = new List<Models.Client>();
-                foreach (var p in Models.contetx.aGetContext().Clients)
+                foreach (var p in Models.context.aGetContext().Clients)
                 {
                     if (LevenshteinDistance(p.lastName, search.Text) <= 3)
                         list.Add(p);
@@ -85,7 +85,7 @@ namespace eSoftDesktop.Forms
                 dgClients.ItemsSource = list;
             }
             else
-                dgClients.ItemsSource = Models.contetx.aGetContext().Clients.ToList();
+                dgClients.ItemsSource = Models.context.aGetContext().Clients.ToList();
 
         }
         public static int LevenshteinDistance(string string1, string string2)

@@ -36,11 +36,11 @@ namespace eSoftDesktop.Forms
             }
             else
             {
-                if(realtor.realtorId ==0)
+                if(realtor.idRealtor ==0)
                 {
-                    Models.contetx.aGetContext().Realtors.Add(realtor);
+                    Models.context.aGetContext().Realtors.Add(realtor);
                 }
-                Models.contetx.aGetContext().SaveChanges();
+                Models.context.aGetContext().SaveChanges();
                 MessageBox.Show("Saved");
                 Close();
             }

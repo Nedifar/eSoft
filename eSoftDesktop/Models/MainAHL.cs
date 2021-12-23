@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace eSoftDesktop.Models
 {
-    public class MainHome
+    public class MainAHL
     {
         [Key]
-        public int homeId { get; set; }
+        public int idAHL { get; set; }
         public string adressCity { get; set; }
         public string adressStreet { get; set; }
         public string addressHouse { get; set; }
@@ -18,6 +18,9 @@ namespace eSoftDesktop.Models
         public string coordinateLatitude { get; set; }
         public string coordinateLongitude { get; set; }
         public double totalArea { get; set; }
+        public List<House> Houses { get; set; } = new List<House>();
+        public List<Apartament> Apartaments { get; set; } = new List<Apartament>();
+        public List<Land> Lands { get; set; } = new List<Land>();
         public List<Supply> Supplies { get; set; } = new List<Supply>();
     }
 }

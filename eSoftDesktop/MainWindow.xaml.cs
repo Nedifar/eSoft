@@ -41,18 +41,26 @@ namespace eSoftDesktop
 
         private void gg()
         {
-            var stream = File.ReadAllLines(@"C:\Users\gazimov.ii0794\Desktop\supplies.txt");
+            var stream = File.ReadAllLines(@"C:\Users\gazimov.ii0794\Downloads\agents.txt");
 
             foreach (var line in stream)
             {
-                var kk = new Models.Supply();
+                var main = new Models.Supply();
                 string[] massiv = line.Split('\t');
-                kk.clientId = int.Parse(massiv[0]);
-                kk.realtorId = int.Parse(massiv[1]);
-                kk.homeId = int.Parse(massiv[2]);
-                kk.Price = int.Parse(massiv[3]);
-                Models.contetx.aGetContext().Supplies.Add(kk);
-                Models.contetx.aGetContext().SaveChanges();
+                main.Price = int.Parse(massiv[1]);
+                main.idRealtor = int.Parse(massiv[2]);
+                main.idClient = int.Parse(massiv[3]);
+                main.idAHL = int.Parse(massiv[4]);
+                //kk.idAHL = int.Parse(massiv[2]);
+                //kk.Price = int.Parse(massiv[3]);
+                Models.context.aGetContext().Supplies.Add(main);
+                Models.context.aGetContext().SaveChanges();
+                //var kk = new Models.District();
+                //string[] massiv = line.Split('\t');
+                //kk.Name = massiv[0];
+                //kk.area = massiv[1];
+                //Models.context.aGetContext().Districts.Add(kk);
+                //Models.context.aGetContext().SaveChanges();
             }
         }
 

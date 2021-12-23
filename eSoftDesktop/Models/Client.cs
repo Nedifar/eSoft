@@ -10,13 +10,13 @@ namespace eSoftDesktop.Models
     public class Client
     {
         [Key]
-        public int clientId { get; set; }
+        public int idClient { get; set; }
         public string lastName { get; set; }
         public string Name { get; set; }
         public string middleName { get; set; }
         public string Telephone { get; set; }
         public string eMail { get; set; }
         public List<Demand> Demands { get; set; }
-        public List<Supply> Supplies { get; set; }  =new List<Supply>();
+        public List<Supply> Supplies { get; set; } = new List<Supply>();
     }
 }

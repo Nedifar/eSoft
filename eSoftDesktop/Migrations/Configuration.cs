@@ -5,14 +5,15 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<eSoftDesktop.Models.contetx>
+    internal sealed class Configuration : DbMigrationsConfiguration<eSoftDesktop.Models.context>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "eSoftDesktop.Models.context";
         }
 
-        protected override void Seed(eSoftDesktop.Models.contetx context)
+        protected override void Seed(eSoftDesktop.Models.context context)
         {
             //  This method will be called after migrating to the latest version.
 

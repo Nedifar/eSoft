@@ -22,7 +22,7 @@ namespace eSoftDesktop.Forms
         public RealtorForm()
         {
             InitializeComponent();
-            dgRealtors.ItemsSource = Models.contetx.aGetContext().Realtors.ToList();
+            dgRealtors.ItemsSource = Models.context.aGetContext().Realtors.ToList();
         }
 
         private void clAdd(object sender, RoutedEventArgs e)
@@ -36,8 +36,8 @@ namespace eSoftDesktop.Forms
         {
             if (dgRealtors.SelectedItem != null)
             {
-                Models.contetx.aGetContext().Realtors.Remove(dgRealtors.SelectedItem as Models.Realtor);
-                Models.contetx.aGetContext().SaveChanges();
+                Models.context.aGetContext().Realtors.Remove(dgRealtors.SelectedItem as Models.Realtor);
+                Models.context.aGetContext().SaveChanges();
             }
             else
                 MessageBox.Show("Выберите объект для операции!");
@@ -47,7 +47,7 @@ namespace eSoftDesktop.Forms
         {
             if ((sender as Window).Visibility == Visibility.Visible)
             {
-                dgRealtors.ItemsSource = Models.contetx.aGetContext().Realtors.ToList();
+                dgRealtors.ItemsSource = Models.context.aGetContext().Realtors.ToList();
             }
             else
             { }
@@ -70,7 +70,7 @@ namespace eSoftDesktop.Forms
             if (search.Text != "")
             {
                 var list = new List<Models.Realtor>();
-                foreach (var p in Models.contetx.aGetContext().Realtors)
+                foreach (var p in Models.context.aGetContext().Realtors)
                 {
                     if (LevenshteinDistance(p.lastName, search.Text) <= 3)
                         list.Add(p);
@@ -82,7 +82,7 @@ namespace eSoftDesktop.Forms
                 dgRealtors.ItemsSource = list;
             }
             else
-                dgRealtors.ItemsSource = Models.contetx.aGetContext().Realtors.ToList();
+                dgRealtors.ItemsSource = Models.context.aGetContext().Realtors.ToList();
         }
         public static int LevenshteinDistance(string string1, string string2)
         {
