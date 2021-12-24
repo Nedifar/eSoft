@@ -1,0 +1,29 @@
+﻿<Window x:Class="eSoftDesktop.Forms.SupplyForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eSoftDesktop.Forms"
+        mc:Ignorable="d"
+        Title="SupplyForm" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="339*" />
+            <RowDefinition Height="44*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Управление предложениями"/>
+        <DataGrid x:Name="dgSupply" AutoGenerateColumns="False" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding idSupply}"/>
+                <DataGridTextColumn Header="Client" Binding="{Binding idClient}"/>
+                <DataGridTextColumn Header="Realtor" Binding="{Binding idRealtor}"/>
+                <DataGridTextColumn Header="HomeId" Binding="{Binding idAHL}"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Add" Click="clAdd" HorizontalAlignment="Left" Grid.Row="2"/>
+        <Button Content="Delete" Click="clDelete" HorizontalAlignment="Right" Grid.Row="2"/>
+        <Button Content="Edit" Click="clEdit" HorizontalAlignment="Center" Grid.Row="2" />
+    </Grid>
+</Window>
