@@ -69,6 +69,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\AddEditDealWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\AddEditDemandWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\AddEditEstateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,7 +93,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\DealForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\DemandForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\EstateForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\PickingSupply.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +128,12 @@
     <Compile Include="Forms\AddEditClientWindow.xaml.cs">
       <DependentUpon>AddEditClientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddEditDealWindow.xaml.cs">
+      <DependentUpon>AddEditDealWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddEditDemandWindow.xaml.cs">
+      <DependentUpon>AddEditDemandWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddEditEstateWindow.xaml.cs">
       <DependentUpon>AddEditEstateWindow.xaml</DependentUpon>
     </Compile>
@@ -120,8 +146,17 @@
     <Compile Include="Forms\ClientForm.xaml.cs">
       <DependentUpon>ClientForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DealForm.xaml.cs">
+      <DependentUpon>DealForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DemandForm.xaml.cs">
+      <DependentUpon>DemandForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EstateForm.xaml.cs">
       <DependentUpon>EstateForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PickingSupply.xaml.cs">
+      <DependentUpon>PickingSupply.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\RealtorForm.xaml.cs">
       <DependentUpon>RealtorForm.xaml</DependentUpon>
@@ -147,11 +182,20 @@
     <Compile Include="Migrations\202112230818245_new1.designer.cs">
       <DependentUpon>202112230818245_new1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201120724359_NewVegas.cs" />
+    <Compile Include="Migrations\202201120724359_NewVegas.designer.cs">
+      <DependentUpon>202201120724359_NewVegas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201120752153_nn.cs" />
+    <Compile Include="Migrations\202201120752153_nn.designer.cs">
+      <DependentUpon>202201120752153_nn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Apartament.cs" />
     <Compile Include="Models\ApartamentDemand.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\context.cs" />
+    <Compile Include="Models\Deal.cs" />
     <Compile Include="Models\Demand.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Models\House.cs" />
@@ -183,6 +227,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112230818245_new1.resx">
       <DependentUpon>202112230818245_new1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201120724359_NewVegas.resx">
+      <DependentUpon>202201120724359_NewVegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201120752153_nn.resx">
+      <DependentUpon>202201120752153_nn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

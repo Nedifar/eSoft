@@ -25,5 +25,6 @@ namespace eSoftDesktop.Models
         public List<HouseDemand> HouseDemands { get; set; } = new List<HouseDemand>();
         public List<LandDemand> LandDemands{ get; set; } = new List<LandDemand>();
         public List<ApartamentDemand> ApartamentDemands{ get; set; } = new List<ApartamentDemand>();
+        public List<Deal> Deals { get; set; } = new List<Deal>();
     }
 }

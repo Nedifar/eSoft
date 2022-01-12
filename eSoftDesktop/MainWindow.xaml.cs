@@ -24,7 +24,7 @@ namespace eSoftDesktop
         public MainWindow()
         {
             InitializeComponent();
-            gg();
+            //gg();
         }
 
         private void clRieltor(object sender, RoutedEventArgs e)
@@ -74,6 +74,18 @@ namespace eSoftDesktop
         {
             Forms.SupplyForm supply = new Forms.SupplyForm();
             supply.Show();
+        }
+
+        private void clDeal(object sender, RoutedEventArgs e)
+        {
+            Forms.DealForm deal = new Forms.DealForm();
+            deal.Show();
+        }
+
+        private void clDemand(object sender, RoutedEventArgs e)
+        {
+            Forms.DemandForm demand = new Forms.DemandForm();
+            demand.Show();
         }
     }
 }

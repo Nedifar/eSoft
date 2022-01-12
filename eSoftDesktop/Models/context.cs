@@ -29,5 +29,6 @@ namespace eSoftDesktop.Models
         public DbSet<Models.Realtor> Realtors { get; set; }
         public DbSet<Models.Supply> Supplies { get; set; }
         public DbSet<District> Districts { get; set; }
+        public DbSet<Deal> Deals { get; set; }
     }
 }

@@ -11,7 +11,10 @@
             <Button Content="Rieltor" Click="clRieltor" />
             <Button Content="Client" Click="clClient"/>
             <Button Content="Estate" Click="clEstate"/>
+            <Button Content="Demand" Click="clDemand"/>
+
             <Button Content="Supplt" Click="clSupply"/>
+            <Button Content="Deals" Click="clDeal"/>
         </StackPanel>
     </Grid>
 </Window>

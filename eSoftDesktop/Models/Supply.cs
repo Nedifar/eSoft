@@ -18,5 +18,7 @@ namespace eSoftDesktop.Models
         public int idAHL { get; set; }
         public MainAHL MainAHL { get; set; }
         public int Price { get; set; }
+        public List<Deal> Deals { get; set; } = new List<Deal>();
+
     }
 }
