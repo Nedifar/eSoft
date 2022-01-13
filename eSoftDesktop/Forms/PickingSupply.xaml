@@ -10,14 +10,14 @@
         <StackPanel >
             <DataGrid x:Name="dgSupply" AutoGenerateColumns="False" Grid.Row="1">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Binding="{Binding supplyId}"/>
-                    <DataGridTextColumn Header="Client" Binding="{Binding clientId}"/>
-                    <DataGridTextColumn Header="Realtor" Binding="{Binding realtorId}"/>
-                    <DataGridTextColumn Header="HomeId" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Id" Binding="{Binding idSupply}"/>
+                    <DataGridTextColumn Header="Client" Binding="{Binding idClient}"/>
+                    <DataGridTextColumn Header="Realtor" Binding="{Binding idRealtor}"/>
+                    <DataGridTextColumn Header="HomeId" Binding="{Binding idAHL}"/>
                     <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button />
+            <Button Content="Заключить сделку" HorizontalAlignment="Center" Margin="0 20" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>

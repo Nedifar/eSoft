@@ -105,6 +105,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\PickingDemand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\PickingSupply.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +158,9 @@
     </Compile>
     <Compile Include="Forms\EstateForm.xaml.cs">
       <DependentUpon>EstateForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PickingDemand.xaml.cs">
+      <DependentUpon>PickingDemand.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\PickingSupply.xaml.cs">
       <DependentUpon>PickingSupply.xaml</DependentUpon>

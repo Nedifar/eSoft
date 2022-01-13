@@ -1,0 +1,27 @@
+﻿<Window x:Class="eSoftDesktop.Forms.PickingDemand"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eSoftDesktop.Forms"
+        mc:Ignorable="d"
+        Title="PickingDemand" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <DataGrid x:Name="dgEstates" AutoGenerateColumns="False" Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding idDemand}"/>
+                    <DataGridTextColumn Header="Клиент" Binding="{Binding idClient}"/>
+                    <DataGridTextColumn Header="Вид недвижимости" Binding="{Binding typeEstate}"/>
+                    <DataGridTextColumn Header="Город" Binding="{Binding addressCity}"/>
+                    <DataGridTextColumn Header="Улица" Binding="{Binding addressStreet}"/>
+                    <DataGridTextColumn Header="Дом" Binding="{Binding addressHouse}"/>
+                    <DataGridTextColumn Header="Квартира" Binding="{Binding addressNumber}"/>
+                    <DataGridTextColumn Header="Минимальная стоимость" Binding="{Binding minPrice}"/>
+                    <DataGridTextColumn Header="Максимальная стоимость" Binding="{Binding maxPrice}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Заключить сделку" Margin="0 20" HorizontalAlignment="Center" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

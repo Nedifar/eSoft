@@ -15,15 +15,18 @@
         <TextBlock Text="Управление предложениями"/>
         <DataGrid x:Name="dgSupply" AutoGenerateColumns="False" Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding supplyId}"/>
-                <DataGridTextColumn Header="Client" Binding="{Binding clientId}"/>
-                <DataGridTextColumn Header="Realtor" Binding="{Binding realtorId}"/>
-                <DataGridTextColumn Header="HomeId" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Id" Binding="{Binding idSupply}"/>
+                <DataGridTextColumn Header="Client" Binding="{Binding idClient}"/>
+                <DataGridTextColumn Header="Realtor" Binding="{Binding idRealtor}"/>
+                <DataGridTextColumn Header="HomeId" Binding="{Binding idAHL}"/>
                 <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Add" Click="clAdd" HorizontalAlignment="Left" Grid.Row="2"/>
         <Button Content="Delete" Click="clDelete" HorizontalAlignment="Right" Grid.Row="2"/>
-        <Button Content="Edit" Click="clEdit" HorizontalAlignment="Center" Grid.Row="2" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
+            <Button Content="Edit" Click="clEdit" Grid.Row="2" Margin="0 0 20 0"/>
+            <Button Content="Pick" Click="clPick" HorizontalAlignment="Center" Grid.Row="2" />
+        </StackPanel>
     </Grid>
 </Window>

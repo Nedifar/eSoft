@@ -87,9 +87,9 @@ namespace eSoftDesktop.Forms
 
         private void clPick(object sender, RoutedEventArgs e)
         {
-            if (dgEstates.SelectedItem != null)
+            if (dgEstates.SelectedItem != null && (dgEstates.SelectedItem as Models.Demand).Deals.Count !=0)
             {
-                AddEditDemandWindow add = new AddEditDemandWindow(dgEstates.SelectedItem as Models.Demand);
+                PickingSupply add = new PickingSupply(dgEstates.SelectedItem as Models.Demand);
                 add.Show();
             }
             else
