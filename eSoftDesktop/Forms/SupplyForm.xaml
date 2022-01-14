@@ -22,11 +22,35 @@
                 <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Add" Click="clAdd" HorizontalAlignment="Left" Grid.Row="2"/>
-        <Button Content="Delete" Click="clDelete" HorizontalAlignment="Right" Grid.Row="2"/>
+        <Button Content="Add" Click="clAdd" HorizontalAlignment="Left" Grid.Row="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Delete" Click="clDelete" HorizontalAlignment="Right" Grid.Row="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
-            <Button Content="Edit" Click="clEdit" Grid.Row="2" Margin="0 0 20 0"/>
-            <Button Content="Pick" Click="clPick" HorizontalAlignment="Center" Grid.Row="2" />
+            <Button Margin="0 0 20 0" Content="Edit" VerticalAlignment="Center" Click="clEdit" Width="80" HorizontalAlignment="Center" Grid.Row="2" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Pick" Width="80" VerticalAlignment="Center" Click="clPick" HorizontalAlignment="Center" Grid.Row="2" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

@@ -10,10 +10,10 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Фамилия" Width="140"/>
-                    <TextBlock Text="Клиент"/>
-                    <TextBlock Text="Риелтор"/>
-                    <TextBlock Text="Недвижимость"/>
+                    <TextBlock Text="Фамилия" Width="140" Height="18"/>
+                    <TextBlock Text="Клиент" Height="22"/>
+                    <TextBlock Text="Риелтор" Height="22"/>
+                    <TextBlock Text="Недвижимость" Height="22"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBox Text="{Binding Price}" Width="140"/>

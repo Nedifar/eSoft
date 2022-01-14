@@ -10,16 +10,16 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Город" Width="140"/>
-                    <TextBlock Text="Улица"/>
-                    <TextBlock Text="Дом"/>
-                    <TextBlock Text="Квартира"/>
-                    <TextBlock Text="Широта"/>
-                    <TextBlock Text="Долгота"/>
-                    <TextBlock Text="Площадь"/>
-                    <TextBlock x:Name="tboL" Text="Комнат"/>
-                    <TextBlock x:Name="tboF" Text="Этаж"/>
-                    <TextBlock Text="Тип"/>
+                    <TextBlock Text="Город" Width="140" Height="18"/>
+                    <TextBlock Text="Улица" Height="18"/>
+                    <TextBlock Text="Дом" Height="18"/>
+                    <TextBlock Text="Квартира" Height="18"/>
+                    <TextBlock Text="Широта" Height="18"/>
+                    <TextBlock Text="Долгота" Height="18"/>
+                    <TextBlock Text="Площадь" Height="18"/>
+                    <TextBlock x:Name="tboL" Text="Комнат" Height="18"/>
+                    <TextBlock x:Name="tboF" Text="Этаж" Height="18"/>
+                    <TextBlock Text="Тип" Height="22"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBox Text="{Binding adressCity}" Width="140"/>

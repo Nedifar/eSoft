@@ -10,11 +10,11 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Фамилия" Width="140"/>
-                    <TextBlock Text="Имя"/>
-                    <TextBlock Text="Отчество"/>
-                    <TextBlock Text="Телефон"/>
-                    <TextBlock Text="Почта"/>
+                    <TextBlock Text="Фамилия" Height="18" Width="140"/>
+                    <TextBlock Text="Имя" Height="18"/>
+                    <TextBlock Text="Отчество" Height="18"/>
+                    <TextBlock Text="Телефон" Height="18"/>
+                    <TextBlock Text="Почта" Height="18"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBox Text="{Binding lastName}" Width="140"/>

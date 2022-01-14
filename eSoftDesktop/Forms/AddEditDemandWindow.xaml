@@ -8,22 +8,22 @@
         Title="AddEditDemandWindow" Height="450" Width="800">
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Клиент"/>
-                    <TextBlock Text="Риелтор"/>
-                    <TextBlock Text="Город"/>
-                    <TextBlock Text="Улица"/>
-                    <TextBlock Text="Дом"/>
-                    <TextBlock Text="Квартира"/>
-                    <TextBlock Text="Минимальная цена"/>
-                    <TextBlock Text="Максимальная цена"/>
-                    <TextBlock x:Name="tblMinS" Text="Минимальная площадь"/>
-                    <TextBlock x:Name="tblMaxS" Text="Максимальная площадь"/>
-                    <TextBlock x:Name="tblMinF" Text="Минимальное количество этажей"/>
-                    <TextBlock x:Name="tblMaxF" Text="Максимальное количество этажей"/>
-                    <TextBlock x:Name="tblMinR" Text="Минимальное количество комнат"/>
-                    <TextBlock x:Name="tblMaxR" Text="Максимальное количество комнат"/>
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="Клиент" Height="22"/>
+                    <TextBlock Text="Риелтор" Height="22"/>
+                    <TextBlock Text="Город" Height="18"/>
+                    <TextBlock Text="Улица" Height="18"/>
+                    <TextBlock Text="Дом" Height="18"/>
+                    <TextBlock Text="Квартира" Height="18"/>
+                    <TextBlock Text="Минимальная цена" Height="18"/>
+                    <TextBlock Text="Максимальная цена" Height="18"/>
+                    <TextBlock x:Name="tblMinS" Text="Минимальная площадь" Height="18"/>
+                    <TextBlock x:Name="tblMaxS" Text="Максимальная площадь" Height="18"/>
+                    <TextBlock x:Name="tblMinF" Text="Минимальное количество этажей" Height="18"/>
+                    <TextBlock x:Name="tblMaxF" Text="Максимальное количество этажей" Height="18"/>
+                    <TextBlock x:Name="tblMinR" Text="Минимальное количество комнат" Height="18"/>
+                    <TextBlock x:Name="tblMaxR" Text="Максимальное количество комнат" Height="22"/>
                     <TextBlock Text="Тип"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">

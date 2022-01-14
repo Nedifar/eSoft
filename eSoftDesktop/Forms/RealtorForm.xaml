@@ -23,8 +23,26 @@
                 <DataGridTextColumn Header="comissionPart" Binding="{Binding comissionPart}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Add" Click="clAdd" HorizontalAlignment="Left" Grid.Row="2"/>
-        <Button Content="Delete" Click="clDelete" HorizontalAlignment="Right" Grid.Row="2"/>
-        <Button Content="Edit" Click="clEdit" HorizontalAlignment="Center" Grid.Row="2" />
+        <Button Content="Add" Click="clAdd" HorizontalAlignment="Left" Grid.Row="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Delete" Click="clDelete" HorizontalAlignment="Right" Grid.Row="2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Edit" VerticalAlignment="Center" Click="clEdit" Width="80" HorizontalAlignment="Center" Grid.Row="2" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

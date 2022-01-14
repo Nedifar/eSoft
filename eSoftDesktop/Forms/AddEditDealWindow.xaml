@@ -10,13 +10,13 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="Потребность" Width="140"/>
-                    <TextBlock Text="Предложение" Width="140"/>
-                    <TextBlock Text="Отчисления клиента-продавца"/>
-                    <TextBlock Text="Отчисления клиента-покупателя"/>
-                    <TextBlock Text="Доля комиссии риэлтора"/>
+                    <TextBlock Text="Потребность" Width="180" Height="22"/>
+                    <TextBlock Text="Предложение" Width="180" Height="22"/>
+                    <TextBlock Text="Отчисления клиента-продавца" Height="18"/>
+                    <TextBlock Text="Отчисления клиента-покупателя" Height="18"/>
+                    <TextBlock Text="Доля комиссии риэлтора" Height="18"/>
                 </StackPanel>
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <ComboBox x:Name="cbDemand" DisplayMemberPath="idDemand" SelectedItem="{Binding Demand}" Width="140"/>
                     <ComboBox x:Name="cbSupply" DisplayMemberPath="idSupply" SelectionChanged="cbSupply_SelectionChanged" SelectedItem="{Binding Supply}"/>
                     <TextBlock x:Name="tbOtSeller" Text="0"/>
